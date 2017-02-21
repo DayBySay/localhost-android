@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val webview = findViewById(R.id.webview) as WebView
-        webview.loadUrl("http://localhost.com")
+        webview.loadUrl("file:///android_asset/index.html")
         webview.setWebViewClient(object: WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
                 return super.shouldOverrideUrlLoading(view, request)
