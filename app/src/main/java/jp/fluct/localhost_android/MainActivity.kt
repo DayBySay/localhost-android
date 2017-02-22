@@ -23,14 +23,15 @@ class MainActivity : AppCompatActivity() {
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
             }
-            override fun shouldInterceptRequest(view: WebView?, request: WebResourceRequest?): WebResourceResponse {
-                return super.shouldInterceptRequest(view, request)
-            }
+//            override fun shouldInterceptRequest(view: WebView?, request: WebResourceRequest?): WebResourceResponse {
+//                return super.shouldInterceptRequest(view, request)
+//            }
 
             override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
                 return super.shouldOverrideUrlLoading(view, request)
             }
         })
+        webview.settings.javaScriptEnabled = true
         webview.loadUrl("file:///android_asset/index.html")
     }
 }
